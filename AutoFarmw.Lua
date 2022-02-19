@@ -12,11 +12,6 @@ local UIGradient_3 = Instance.new("UIGradient")
 local Header2 = Instance.new("TextLabel")
 local UICorner_4 = Instance.new("UICorner")
 local UIGradient_4 = Instance.new("UIGradient")
-local ImageLabel = Instance.new("ImageLabel")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local ImageLabel_3 = Instance.new("ImageLabel")
-local ImageLabel_4 = Instance.new("ImageLabel")
-local ImageLabel_5 = Instance.new("ImageLabel")
 local Main = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
 local UIGradient_5 = Instance.new("UIGradient")
@@ -98,41 +93,6 @@ UICorner_4.Parent = Header2
 UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.55, Color3.fromRGB(170, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 255, 127))}
 UIGradient_4.Parent = Header2
 
-ImageLabel.Parent = LoginMenu
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.Position = UDim2.new(0, 0, 0.489795923, 0)
-ImageLabel.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel.Image = "rbxassetid://53252120"
-
-ImageLabel_2.Parent = LoginMenu
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.Position = UDim2.new(0.763593376, 0, 0.489795893, 0)
-ImageLabel_2.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel_2.Image = "rbxassetid://53252120"
-
-ImageLabel_3.Parent = LoginMenu
-ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_3.BackgroundTransparency = 1.000
-ImageLabel_3.Position = UDim2.new(0.0141843976, 0, 0.255102038, 0)
-ImageLabel_3.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel_3.Image = "rbxassetid://442325811"
-
-ImageLabel_4.Parent = LoginMenu
-ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_4.BackgroundTransparency = 1.000
-ImageLabel_4.Position = UDim2.new(0.744680882, 0, 0.244897962, 0)
-ImageLabel_4.Size = UDim2.new(0, 100, 0, 100)
-ImageLabel_4.Image = "rbxassetid://442325811"
-
-ImageLabel_5.Parent = LoginMenu
-ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_5.BackgroundTransparency = 1.000
-ImageLabel_5.Position = UDim2.new(0.416075647, 0, 0.168367341, 0)
-ImageLabel_5.Size = UDim2.new(0, 71, 0, 63)
-ImageLabel_5.Image = "rbxassetid://1923186274"
-
 Main.Name = "Main"
 Main.Parent = Menu
 Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -161,11 +121,6 @@ AutoFarmOff.TextColor3 = Color3.fromRGB(170, 255, 255)
 AutoFarmOff.TextScaled = true
 AutoFarmOff.TextSize = 14.000
 AutoFarmOff.TextWrapped = true
-AutoFarmOff.MouseButton1Down:Connect(function()
-	if getgenv().farmer == true then
-		getgenv().farmer = false
-	end
-end)
 
 UICorner_6.Parent = AutoFarmOff
 
@@ -181,17 +136,6 @@ AutoFarm.TextColor3 = Color3.fromRGB(170, 0, 0)
 AutoFarm.TextScaled = true
 AutoFarm.TextSize = 14.000
 AutoFarm.TextWrapped = true
-AutoFarm.MouseButton1Down:Connect(function()
-	getgenv().farmer = true;
-
-	while wait() do 
-		if getgenv().farmer == true then
-			game:GetService"ReplicatedStorage".Remotes.TappingEvent:FireServer(Click)
-		end
-
-
-	end
-end)
 
 UICorner_7.Parent = AutoFarm
 
@@ -229,7 +173,7 @@ UICorner_9.Parent = Header
 
 -- Scripts:
 
-local function NTNK_fake_script() -- Enter.LocalScript 
+local function FLAAZM_fake_script() -- Enter.LocalScript 
 	local script = Instance.new('LocalScript', Enter)
 
 	local LoginMenu = script.Parent.Parent
@@ -237,7 +181,7 @@ local function NTNK_fake_script() -- Enter.LocalScript
 	local Password = script.Parent.Parent.TextBox
 	local Enter = script.Parent.Parent.Enter
 	
-	Enter.MouseButton1Click:connect(function()
+	Enter.MouseButton1Click:Connect(function()
 		if Password.Text == "DaGrass" or Password.Text == "AnimeTitts" then
 			print("Successfully Whitelisted")
 			LoginMenu.Visible = false
@@ -246,7 +190,6 @@ local function NTNK_fake_script() -- Enter.LocalScript
 			script.Parent.Parent.Parent:Destroy()
 		end
 	end)
-	---By Dova, And Brandon
 	
 end
-coroutine.wrap(NTNK_fake_script)()
+coroutine.wrap(FLAAZM_fake_script)()
