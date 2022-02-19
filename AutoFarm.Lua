@@ -1,3 +1,4 @@
+
 local GrassHub = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -47,7 +48,7 @@ Credits.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Credits.Position = UDim2.new(0.792490125, 0, 0.916932881, 0)
 Credits.Size = UDim2.new(0, 105, 0, 26)
 Credits.Font = Enum.Font.Garamond
-Credits.Text = "By: Da Grass Owner"
+Credits.Text = "By: Abyss Owner"
 Credits.TextColor3 = Color3.fromRGB(255, 0, 127)
 Credits.TextScaled = true
 Credits.TextSize = 14.000
@@ -97,4 +98,3 @@ AutoFarmOff.MouseButton1Down:Connect(function()
 		getgenv().farmer = false
 	end
 end)
-
